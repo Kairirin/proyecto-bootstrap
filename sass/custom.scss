@@ -1,0 +1,13 @@
+// Required
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+// Variables y mapas a sobreescribir
+@import "bootstrap/scss/bootstrap";
+
+// Añade el resto del código customizado aquí
+
+.carousel-item > img{
+    transform: scale(0.6);
+}
