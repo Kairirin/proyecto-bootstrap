@@ -5,14 +5,66 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="sass/custom.scss">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+<!--   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Customize Bootstrap con Sass - Bisicletas</title>
 </head>
 
 <body>
   <header>
-    <!-- Incluye aquí tu header con el navbar y la imagen del logo de la web -->
+    <nav class="navbar navbar-expand-lg bg-light border-bottom border-body" data-bs-theme="light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/logo.png" alt="logo" width="60" class="d-inline-block">
+          Bootstrap!
+          </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">HTML5</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CSS3
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Flex y grid</a></li>
+                <li><a class="dropdown-item" href="#">Variables</a></li>
+                <li><a class="dropdown-item" href="#">Rules</a></li>
+                <li><a class="dropdown-item" href="#">Animaciones</a></li>
+                <li><a class="dropdown-item" href="#">Nesting</a></li>
+                <div class="dropdown-divider"></div>
+                <li><a class="dropdown-item" href="#">Pintacaras</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sass
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Sintaxis Scss</a></li>
+                <li><a class="dropdown-item" href="#">Sintaxis Sass</a></li>
+                <div class="dropdown-divider"></div>
+                <li><a class="dropdown-item" href="#">scss to sass</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bootstrap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tailwind</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" data-bs-theme="light">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
   </header>
   <main>
     <!-- 
