@@ -3,11 +3,98 @@
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
 
+$bybike: pink;
+$bycar: rgba(160, 250, 3, 0.621);
+$gradiente: rgb(63, 94, 251);
+$boton-navbar-hover: rgb(126, 218, 241);
+
+$success: rgb(175, 223, 175);
+$danger: rgb(226, 156, 156);
+
+$custom-colors: (
+    "bybike": $bybike,
+    "bycar": $bycar,
+    "gradiente": $gradiente,
+    "btn-success": $success,
+    "btn-danger": $danger
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$dropdown-link-color: grey;
+$dropdown-bg: $bybike;
+$dropdown-link-hover-color: rgb(221, 94, 115);
+
+$navbar-light-color: white;
+$navbar-light-hover-color: rgb(204, 202, 202); 
+
+$offcanvas-bg-color: $bybike;
+$offcanvas-color: rgb(221, 94, 115);
+
+$accordion-nov: $bybike;
+$accordion-sal: $success;
+$accordion-neu: rgb(132, 206, 255);
+
+
 // Variables y mapas a sobreescribir
 @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/accordion";
 
 // Añade el resto del código customizado aquí
 
-.carousel-item > img{
+.navbar {
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+
+    a{
+        color: white;
+    }
+
+    form{
+        button:hover{
+            background-color: $boton-navbar-hover;
+        }
+    }
+}
+
+.accordion-header {
+    .news {
+        background-color: $accordion-nov;
+    }
+
+    .sal {
+        background-color: $accordion-sal;
+    }
+
+    .neum {
+        background-color: $accordion-neu;
+    }
+}
+
+.form-buttons {
+    .btn-success{
+        color: rgb(105, 105, 105);
+        background-color: $success;
+
+        &:hover {
+            color: white;
+            background-color: rgb(70, 201, 70);
+        }
+    }
+
+    .btn-danger {
+        color: rgb(105, 105, 105);
+        background-color: $danger;
+
+        &:hover {
+            color: white;
+            background-color: rgb(202, 104, 104);
+        }
+    }
+}
+
+.carousel-item>img {
     transform: scale(0.6);
 }

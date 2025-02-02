@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="sass/custom.scss">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-<!--   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  -->
+  <link rel="stylesheet" href="sass/custom.scss">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Customize Bootstrap con Sass - Bisicletas</title>
 </head>
@@ -18,61 +17,252 @@
           <img src="/logo.png" alt="logo" width="60" class="d-inline-block">
           Bootstrap!
           </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">HTML5</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                CSS3
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Flex y grid</a></li>
-                <li><a class="dropdown-item" href="#">Variables</a></li>
-                <li><a class="dropdown-item" href="#">Rules</a></li>
-                <li><a class="dropdown-item" href="#">Animaciones</a></li>
-                <li><a class="dropdown-item" href="#">Nesting</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" href="#">Pintacaras</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Sass
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Sintaxis Scss</a></li>
-                <li><a class="dropdown-item" href="#">Sintaxis Sass</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" href="#">scss to sass</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bootstrap</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tailwind</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" data-bs-theme="light">
-            <button class="btn btn-outline-primary" type="submit">Search</button>
-          </form>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Bootstrap!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">HTML5</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  CSS3
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Flex y grid</a></li>
+                  <li><a class="dropdown-item" href="#">Variables</a></li>
+                  <li><a class="dropdown-item" href="#">Rules</a></li>
+                  <li><a class="dropdown-item" href="#">Animaciones</a></li>
+                  <li><a class="dropdown-item" href="#">Nesting</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="#">Pintacaras</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sass
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Sintaxis Scss</a></li>
+                  <li><a class="dropdown-item" href="#">Sintaxis Sass</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="#">scss to sass</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bootstrap</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Tailwind</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" data-bs-theme="light">
+              <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+          </div>
         </div>
       </div>
     </nav>
   </header>
   <main>
-    <!-- 
-      :)
-    -->
+    <div class="container-fluid" style="margin-top: 1.5rem;">
+      <div class="row">
+        <div class="col col-md-3  d-md-block d-none">
+          <aside>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button news" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                      <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z"/>
+                      <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z"/>
+                    </svg>
+                    Novedades
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button sal collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                      <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
+                    </svg>
+                    Próximas salidas
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button neum collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-frown-fill" viewBox="0 0 16 16">
+                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m-2.715 5.933a.5.5 0 0 1-.183-.683A4.5 4.5 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 0 1-.866.5A3.5 3.5 0 0 0 8 10.5a3.5 3.5 0 0 0-3.032 1.75.5.5 0 0 1-.683.183M10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8"/>
+                    </svg>
+                    Neumáticos pinchados
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-12 col-md-9">
+          <section>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="profe-tab" data-bs-toggle="tab" data-bs-target="#profe-tab-pane" type="button" role="tab" aria-controls="profe-tab-pane" aria-selected="true">Las bicis de la profe</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="nanos-tab" data-bs-toggle="tab" data-bs-target="#nanos-tab-pane" type="button" role="tab" aria-controls="nanos-tab-pane" aria-selected="false">Las bicis de los nanos</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contacta con nosotros</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Próximamente...</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="profe-tab-pane" role="tabpanel" aria-labelledby="profe-tab" tabindex="0">
+                <div class="card-group">
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-3 g-4">
+                      <div class="card shadow">
+                        <img src="/orbea.jpg" class="card-img-top" alt="Bici tocha">
+                        <div class="card-body">
+                          <h5 class="card-title">Orbea</h5>
+                          <p class="card-text">Necesito esta bici para vivir. Me da la vida, pero no tengo tiempo para usarla como debería, confiemos que en unos años vuelva a tener unas piernas como roca (en mi caso llevo tantos años sin montar en bici que creo que me estampo).</p>
+                        </div>
+                      </div>
+                      <div class="card shadow">
+                        <img src="/hibrida.jpg" class="card-img-top" alt="Bici estándar">
+                        <div class="card-body">
+                          <h5 class="card-title">Bicicleta híbrida</h5>
+                          <p class="card-text">Usa esta mejor que la de paseo, el agarre en el asfalto es mejor, aunque todo depende de lo que te guste comer suelo. Ideal para ciudad y días de lluvia.</p>
+                        </div>
+                      </div>
+                      <div class="card shadow">
+                        <img src="/bici-paseo.avif" class="card-img-top" alt="Bici cuqui">
+                        <div class="card-body">
+                          <h5 class="card-title">Bici estilo holandesa</h5>
+                          <p class="card-text">Los Neumáticos de esta bici no tienen suficiente agarre, en un descuido te comes el suelo, pero es muy aesthetic, y triunfa en Tumblr (sigue vivo). </p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nanos-tab-pane" role="tabpanel" aria-labelledby="nanos-tab" tabindex="0">
+                <div id="carouselNanos" class="carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselNanos" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselNanos" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselNanos" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselNanos" data-bs-slide-to="3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                      <img src="/trek-lila.webp" class="d-block w-100" alt="Bici lila">
+                      <div class="carousel-caption d-none d-lg-block">
+                        <h5>Bicicleta híbrida lila</h5>
+                        <p>Tremenda bici lila</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                      <img src="/trek-roja.webp" class="d-block w-100" alt="Bici roja">
+                      <div class="carousel-caption d-none d-lg-block">
+                        <h5>Bicicleta híbrida roja</h5>
+                        <p>Tremenda bici roja</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                      <img src="/trek-rosa.webp" class="d-block w-100" alt="Bici rosa">
+                      <div class="carousel-caption d-none d-lg-block">
+                        <h5>Bicicleta híbrida rosa</h5>
+                        <p>Tremenda bici rosa</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                      <img src="/trek-trail.webp" class="d-block w-100" alt="Bici blanca">
+                      <div class="carousel-caption d-none d-lg-block">
+                        <h5>Bicicleta híbrida blanca</h5>
+                        <p>Tremenda bici blanca</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselNanos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselNanos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <form>
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@email.com">
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                  <div class="form-floating">
+                    <textarea class="form-control" id="floatingQueja">
+                    </textarea>
+                    <label for="floatingQueja">Introduce aquí tus penas</label>
+                  </div>
+                  <div class="row form-buttons" style="margin-bottom: 1.2rem;">
+                    <div class="col text-end">
+                      <button type="submit" class="btn btn-success col-sm-12 col-md-2" style="margin-top: .7rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                          <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+                        </svg>
+                        Enviar</button>
+                      <button type="button" class="btn btn-danger ms-md-2 col-sm-12 col-md-2" style="margin-top: .7rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                          <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                        </svg>
+                        Llorar</button>
+                    </div>
+                  </div>
+<!--                   <div class="d-flex justify-content-end" style="margin-top: 1.2rem;">
+                  </div> -->
+                </form>
+              </div>
+              <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </div>
   </main>
   <footer>
-    <!-- Creador de la web, siempre al final -->
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid justify-content-center">
+        <span class="navbar-text">
+          Creador por: Irene Vinader Antón
+        </span>
+      </div>
+    </nav>
   </footer>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
