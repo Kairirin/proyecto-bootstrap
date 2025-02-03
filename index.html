@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="sass/custom.scss">
+  <link rel="stylesheet" href="sass/style.scss">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Customize Bootstrap con Sass - Bisicletas</title>
 </head>
@@ -144,15 +145,17 @@
             </ul>
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="profe-tab-pane" role="tabpanel" aria-labelledby="profe-tab" tabindex="0">
-                <div class="card-group">
                   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-3 g-4">
-                      <div class="card shadow">
+                    <div class="col mb-4">
+                      <div class="card shadow h-100">
                         <img src="/orbea.jpg" class="card-img-top" alt="Bici tocha">
                         <div class="card-body">
                           <h5 class="card-title">Orbea</h5>
                           <p class="card-text">Necesito esta bici para vivir. Me da la vida, pero no tengo tiempo para usarla como debería, confiemos que en unos años vuelva a tener unas piernas como roca (en mi caso llevo tantos años sin montar en bici que creo que me estampo).</p>
                         </div>
                       </div>
+                    </div>
+                    <div class="col mb-4 h-100">
                       <div class="card shadow">
                         <img src="/hibrida.jpg" class="card-img-top" alt="Bici estándar">
                         <div class="card-body">
@@ -160,6 +163,8 @@
                           <p class="card-text">Usa esta mejor que la de paseo, el agarre en el asfalto es mejor, aunque todo depende de lo que te guste comer suelo. Ideal para ciudad y días de lluvia.</p>
                         </div>
                       </div>
+                      </div>
+                      <div class="col mb-4 h-100">
                       <div class="card shadow">
                         <img src="/bici-paseo.avif" class="card-img-top" alt="Bici cuqui">
                         <div class="card-body">
@@ -167,8 +172,8 @@
                           <p class="card-text">Los Neumáticos de esta bici no tienen suficiente agarre, en un descuido te comes el suelo, pero es muy aesthetic, y triunfa en Tumblr (sigue vivo). </p>
                         </div>
                       </div>
+                      </div>
                   </div>
-                </div>
               </div>
               <div class="tab-pane fade" id="nanos-tab-pane" role="tabpanel" aria-labelledby="nanos-tab" tabindex="0">
                 <div id="carouselNanos" class="carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
